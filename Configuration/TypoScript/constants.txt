@@ -1,0 +1,6 @@
+# cat=plugin.pagepreloader; type=options [Load1=load1, Load2=load2, Load3=load3, Load4=load4,Load5=load5,Load6=load6,Load7=load7,Load8=load8,Load9=load9]; label=Loader;
+plugin.pagepreloader.view.Loader = Load1
+# cat=plugin.pagepreloader; type=string; Label=Couleur du loader
+plugin.pagepreloader.view.Color = salmon
+# cat=plugin.pagepreloader; type=string; Label=Couleur du background
+plugin.pagepreloader.view.BackgroundColor = #fff

@@ -1,0 +1,735 @@
+page.jsFooterInline.100 = TEXT
+page.jsFooterInline.100.value  (
+    jQuery(window).load(function() {
+        jQuery("#preloader").delay(2000).fadeOut("slow");
+    })
+)
+
+page.CSS_inlineStyle  ( 
+#preloader {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: {$plugin.pagepreloader.view.BackgroundColor};
+     z-index: 9999;
+    height: 100%;
+}
+
+ul.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+}
+ul.flex-container li {
+  padding: 10px;
+  height: 100px;
+  width: 100px;
+  margin: 30px 20px;
+  position: relative;
+  text-align: center;
+}
+)
+
+[globalVar= LIT:load1={$plugin.pagepreloader.view.Loader}]
+page.CSS_inlineStyle  ( 
+.load1 {
+  display: inline-block;
+  width: 75px;
+  height: 5px;
+  background: {$plugin.pagepreloader.view.Color};
+  border-radius: 100px;
+  transform-origin: center center;
+  animation: load1 4s ease infinite;
+  margin-top: 35px;
+}
+
+@keyframes load1 {
+  0% {
+    transform: rotate(-20deg);
+    height: 5px;
+    width: 75px;
+  }
+  5% {
+    height: 5px;
+    width: 75px;
+  }
+  30% {
+    transform: rotate(380deg);
+    height: 5px;
+    width: 75px;
+  }
+  40% {
+    transform: rotate(360deg);
+    height: 5px;
+    width: 75px;
+  }
+  55% {
+    transform: rotate(0deg);
+    height: 5px;
+    width: 5px;
+  }
+  65% {
+    transform: rotate(0deg);
+    height: 5px;
+    width: 85px;
+  }
+  68% {
+    transform: rotate(0deg);
+    height: 5px;
+  }
+  75% {
+    transform: rotate(0deg);
+    height: 5px;
+    width: 1px;
+  }
+  78% {
+    height: 5px;
+    width: 5px;
+  }
+  90% {
+    height: 5px;
+    width: 75px;
+    transform: rotate(0deg);
+  }
+  99%, 100% {
+    height: 5px;
+    width: 75px;
+    transform: rotate(-20deg);
+  }
+}
+)
+page.bodyTag = <body> <div id="preloader"><ul class="flex-container"><li><span class="load1"></span></li></ul></div>
+[global]
+
+[globalVar= LIT:load2={$plugin.pagepreloader.view.Loader}]
+page.CSS_inlineStyle  ( 
+.load2 {
+  display: inline-block;
+  position: relative;
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  animation: spin 3.25s infinite;
+  transform: rotate(0deg);
+  animation-delay: -.5s;
+  margin-top: 3px;
+}
+.load2:after, .load2:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  display: block;
+  background: {$plugin.pagepreloader.view.Color};
+  border-radius: 100%;
+  animation: shrink 3.25s infinite;
+  animation-delay: -.5s;
+}
+.load2:before {
+  left: 70%;
+}
+.load2:after {
+  top: 70%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    height: 75px;
+    width: 75px;
+    margin-top: 0;
+  }
+  33% {
+    height: 0;
+    width: 0;
+    margin-top: 35px;
+  }
+  55% {
+    transform: rotate(720deg);
+    margin-top: 35px;
+    height: 0;
+    width: 0;
+  }
+  70% {
+    height: 75px;
+    width: 75px;
+    margin-top: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    margin-top: 0;
+  }
+}
+@keyframes shrink {
+  0%, 100% {
+    height: 20px;
+    width: 20px;
+  }
+  33%, 55% {
+    height: 0;
+    width: 0;
+  }
+  70% {
+    height: 20px;
+    width: 20px;
+  }
+}
+)
+page.bodyTag = <body> <div id="preloader"><ul class="flex-container"><li><span class="load2"></span></li></ul></div>
+[global]
+
+[globalVar= LIT:load3={$plugin.pagepreloader.view.Loader}]
+page.CSS_inlineStyle  ( 
+.load3-center {
+  display: inline-block;
+  position: absolute;
+  background: {$plugin.pagepreloader.view.Color};
+  transform: rotate(45deg);
+  height: 30px;
+  width: 30px;
+  left: 36px;
+  top: 37px;
+  border-radius: 3px;
+  animation: pulse 1s ease infinite;
+}
+
+.load3 {
+  display: inline-block;
+  position: relative;
+  width: 75px;
+  height: 75px;
+  margin-top: 3px;
+  transform: rotate(45deg);
+}
+.load3:after, .load3:before {
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 10px;
+  display: block;
+  top: 0;
+  border-radius: 3px;
+  background: {$plugin.pagepreloader.view.Color};
+  animation-delay: -.5s;
+}
+.load3:after {
+  right: 0;
+  animation: square-tr 2s ease infinite;
+  animation-delay: .125s;
+}
+.load3:before {
+  animation: square-tl 2s ease infinite;
+  animation-delay: .125s;
+}
+
+.load3.two {
+  position: relative;
+  top: -80px;
+}
+.load3.two:after, .load3.two:before {
+  bottom: 0;
+  top: initial;
+}
+.load3.two:after {
+  animation: square-br 2s ease infinite;
+  animation-direction: reverse;
+}
+.load3.two:before {
+  animation: square-bl 2s ease infinite;
+  animation-direction: reverse;
+}
+
+@keyframes square-tl {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, 62.5px);
+  }
+  50% {
+    transform: translate(62.5px, 62.5px);
+  }
+  75% {
+    transform: translate(62.5px, 0);
+  }
+}
+@keyframes square-bl {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -62.5px);
+  }
+  50% {
+    transform: translate(62.5px, -62.5px);
+  }
+  75% {
+    transform: translate(62.5px, 0);
+  }
+}
+@keyframes square-tr {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-62.5px, 0);
+  }
+  50% {
+    transform: translate(-62.5px, 62.5px);
+  }
+  75% {
+    transform: translate(0, 62.5px);
+  }
+}
+@keyframes square-br {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-62.5px, 0);
+  }
+  50% {
+    transform: translate(-62.5px, -62.5px);
+  }
+  75% {
+    transform: translate(0, -62.5px);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(inherit) rotate(45deg);
+  }
+  75% {
+    transform: scale(0.25) rotate(45deg);
+  }
+}
+)
+page.bodyTag = <body> <div id="preloader"><ul class="flex-container"><li><span class="load3 one"></span><span class="load3 two"></span><span class="load3-center"></span></li></ul></div>
+[global]
+
+[globalVar= LIT:load4={$plugin.pagepreloader.view.Loader}]
+page.CSS_inlineStyle  ( 
+.load4 {
+  display: inline-block;
+  position: relative;
+  width: 75px;
+  height: 75px;
+  margin-top: 2.5px;
+  border-radius: 100px;
+  overflow: hidden;
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+  /* this fixes overflow:hidden with border-radius in Chrome/Opera */
+  animation: square-spin 4s ease infinite;
+}
+.load4:before, .load4:after {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  content: '';
+  background: {$plugin.pagepreloader.view.Color};
+  animation: pulse 2s ease infinite;
+}
+.load4:before {
+  left: -100px;
+  transform: rotate(45deg);
+  bottom: -100px;
+}
+.load4:after {
+  right: -100px;
+  transform: rotate(45deg);
+  top: -100px;
+}
+
+.load4-2 {
+  display: inline-block;
+  position: relative;
+  width: 75px;
+  height: 75px;
+  margin-top: 3px;
+  overflow: hidden;
+  animation: square-spin2 4s ease infinite;
+  top: -80px;
+}
+.load4-2:after {
+  display: block;
+  content: '';
+  height: 3px;
+  width: 35px;
+  border-radius: 100px;
+  background: {$plugin.pagepreloader.view.Color};
+  left: 35px;
+  top: 36px;
+  position: absolute;
+}
+
+@keyframes square-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes square-spin2 {
+  0% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(135deg);
+  }
+  50% {
+    transform: rotate(225deg);
+  }
+  75% {
+    transform: rotate(315deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+)
+page.bodyTag = <body> <div id="preloader"><ul class="flex-container"><li><span class="load4"></span><span class="load4-2"></span></li></ul></div>
+[global]
+
+[globalVar= LIT:load5={$plugin.pagepreloader.view.Loader}]
+page.CSS_inlineStyle  ( 
+.load5, .load5:after, .load5:before {
+  display: inline-block;
+  position: relative;
+  width: 5px;
+  height: 50px;
+  border-radius: 1000px;
+  background: {$plugin.pagepreloader.view.Color};
+  margin-top: 5px;
+  animation: upDown2 1s ease infinite;
+  animation-direction: alternate;
+  animation-delay: .25s;
+}
+.load5:after, .load5:before {
+  position: absolute;
+  content: '';
+  animation: upDown 1s ease infinite;
+  animation-direction: alternate;
+}
+.load5:before {
+  left: -10px;
+}
+.load5:after {
+  left: 10px;
+  animation-delay: .5s;
+}
+
+@keyframes upDown {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+@keyframes upDown2 {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+)
+page.bodyTag = <body> <div id="preloader"><ul class="flex-container"><li><span class="load5"></span></li></ul></div>
+[global]
+
+[globalVar= LIT:load6={$plugin.pagepreloader.view.Loader}]
+page.CSS_inlineStyle  ( 
+.load6 {
+  display: inline-block;
+  position: relative;
+  width: 75px;
+  height: 75px;
+  border-radius: 4px;
+  border-bottom: 5px solid {$plugin.pagepreloader.view.Color};
+  overflow: hidden;
+}
+.load6:after, .load6:before {
+  position: absolute;
+  content: '';
+  background: {$plugin.pagepreloader.view.Color};
+  border-radius: 100%;
+}
+.load6:before {
+  height: 35px;
+  width: 35px;
+  left: 26.5%;
+  animation: bounce1 1.35s ease-in infinite;
+  animation-direction: alternate;
+}
+.load6:after {
+  height: 15px;
+  width: 15px;
+  left: 39.5%;
+  animation: bounce2 1.35s ease-out infinite;
+  animation-direction: alternate;
+  transform: translateY(225px);
+}
+
+@keyframes bounce1 {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(255px);
+  }
+}
+@keyframes bounce2 {
+  from {
+    transform: translateY(225px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+)
+page.bodyTag = <body> <div id="preloader"><ul class="flex-container"><li><span class="load6"></span></li></ul></div>
+[global]
+
+[globalVar= LIT:load7={$plugin.pagepreloader.view.Loader}]
+page.CSS_inlineStyle  ( 
+.load7 {
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  border: 4px solid {$plugin.pagepreloader.view.Color};
+  animation: spinShrink 2.2s ease-in infinite;
+  animation-direction: alternate;
+}
+.load7:after {
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: {$plugin.pagepreloader.view.Color};
+  position: absolute;
+  border-radius: 100%;
+  animation: dotShrink 2.2s ease-in infinite;
+  animation-direction: alternate;
+  right: 13px;
+}
+.load7:before {
+  background: transparent;
+  border: 2px solid {$plugin.pagepreloader.view.Color};
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  content: '';
+  display: block;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  opacity: 0;
+  animation: ring 4.4s ease infinite;
+}
+
+@keyframes spinShrink {
+  from {
+    width: 80px;
+    height: 80px;
+    transform: rotate(0deg);
+  }
+  to {
+    width: 10px;
+    height: 10px;
+    transform: rotate(1080deg);
+    margin-top: 30px;
+  }
+}
+@keyframes dotShrink {
+  from {
+    height: 20px;
+    width: 20px;
+  }
+  to {
+    height: 3px;
+    width: 3px;
+    right: 0;
+  }
+}
+@keyframes ring {
+  0%, 50%, 100% {
+    opacity: 0;
+    width: 10px;
+    height: 10px;
+  }
+  51% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+  }
+}
+)
+page.bodyTag = <body> <div id="preloader"><ul class="flex-container"><li><span class="load7"></span></li></ul></div>
+[global]
+
+[globalVar= LIT:load8={$plugin.pagepreloader.view.Loader}]
+page.CSS_inlineStyle  ( 
+.load8, .load8-2 {
+  display: inline-block;
+  position: relative;
+  width: 85px;
+  height: 85px;
+}
+.load8:before, .load8-2:before, .load8:after, .load8-2:after {
+  content: '';
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 2px;
+  position: absolute;
+  background: {$plugin.pagepreloader.view.Color};
+}
+.load8:before, .load8-2:before {
+  transform: translate(0, 0);
+  animation: slide1 1s ease infinite;
+  animation-direction: alternate;
+}
+.load8:after, .load8-2:after {
+  transform: translate(60px, 60px);
+  animation: slide4 1s ease infinite;
+  animation-direction: alternate;
+}
+
+.load8-2 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.load8-2:before {
+  transform: translate(0px, 20px);
+  animation: slide2 1s ease infinite;
+  animation-direction: alternate;
+}
+.load8-2:after {
+  transform: translate(80px, 40px);
+  animation: slide3 1s ease infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slide1 {
+  from {
+    transform: translateX(0px) translateY(0px);
+  }
+  to {
+    transform: translateX(80px) translateY(0px);
+  }
+}
+@keyframes slide4 {
+  from {
+    transform: translateX(80px) translateY(60px);
+  }
+  to {
+    transform: translateX(0px) translateY(60px);
+  }
+}
+@keyframes slide3 {
+  from {
+    transform: translateX(55px) translateY(40px);
+  }
+  to {
+    transform: translateX(25px) translateY(40px);
+  }
+}
+@keyframes slide2 {
+  from {
+    transform: translateX(25px) translateY(20px);
+  }
+  to {
+    transform: translateX(55px) translateY(20px);
+  }
+}
+)
+page.bodyTag = <body> <div id="preloader"><ul class="flex-container"><li><span class="load8"></span><span class="load8-2"></span></li></ul></div>
+[global]
+
+[globalVar= LIT:load9={$plugin.pagepreloader.view.Loader}]
+page.CSS_inlineStyle  ( 
+.load9 {
+  display: inline-block;
+  position: relative;
+  width: 85px;
+  height: 85px;
+  border-radius: 100%;
+  border: 5px solid transparent;
+  border-bottom: 5px solid {$plugin.pagepreloader.view.Color};
+  border-left: 5px solid {$plugin.pagepreloader.view.Color};
+  animation: spinR 2s linear infinite;
+}
+.load9:before, .load9:after {
+  content: '';
+  display: block;
+  border-radius: 100%;
+  position: absolute;
+}
+.load9:before {
+  height: 50px;
+  width: 50px;
+  border: 3px solid transparent;
+  border-top: 3px solid {$plugin.pagepreloader.view.Color};
+  border-right: 3px solid {$plugin.pagepreloader.view.Color};
+  animation: spinL .75s linear infinite;
+  transform-origin: center center;
+  top: 11%;
+  left: 11%;
+}
+.load9:after {
+  height: 10px;
+  width: 10px;
+  background: transparent;
+  border: 2px solid {$plugin.pagepreloader.view.Color};
+  top: 35.5%;
+  left: 35.5%;
+}
+
+@keyframes spinR {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinL {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+)
+page.bodyTag = <body> <div id="preloader"><ul class="flex-container"><li><span class="load8"></span></li></ul></div>
+[global]
