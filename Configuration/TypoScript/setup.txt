@@ -34,21 +34,6 @@ page.cssInline {
   box-sizing: content-box;
 }
 
-ul.flex-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  list-style-type: none;
-}
-ul.flex-container li {
-  padding: 10px;
-  height: 100px;
-  width: 100px;
-  margin: 30px 20px;
-  position: relative;
-  text-align: center;
-}
 )
 }
 [global]
@@ -61,43 +46,43 @@ ul.flex-container li {
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/hourglass.txt">
 [global]
 
-[globalVar= LIT:load1={$plugin.pagepreloader.view.Loader}]
+[globalVar= LIT:loader1={$plugin.pagepreloader.view.Loader}]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/loader1.txt">
 [global]
 
-[globalVar= LIT:load2={$plugin.pagepreloader.view.Loader}]
+[globalVar= LIT:loader2={$plugin.pagepreloader.view.Loader}]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/loader2.txt">
 [global]
 
-[globalVar= LIT:load3={$plugin.pagepreloader.view.Loader}]
+[globalVar= LIT:loader3={$plugin.pagepreloader.view.Loader}]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/loader3.txt">
 [global]
 
-[globalVar= LIT:load4={$plugin.pagepreloader.view.Loader}]
+[globalVar= LIT:loader4={$plugin.pagepreloader.view.Loader}]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/loader4.txt">
 [global]
 
-[globalVar= LIT:load5={$plugin.pagepreloader.view.Loader}]
+[globalVar= LIT:loader5={$plugin.pagepreloader.view.Loader}]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/loader5.txt">
 [global]
 
-[globalVar= LIT:load6={$plugin.pagepreloader.view.Loader}]
+[globalVar= LIT:loader6={$plugin.pagepreloader.view.Loader}]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/loader6.txt">
 [global]
 
-[globalVar= LIT:load7={$plugin.pagepreloader.view.Loader}]
+[globalVar= LIT:loader7={$plugin.pagepreloader.view.Loader}]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/loader7.txt">
 [global]
 
-[globalVar= LIT:load8={$plugin.pagepreloader.view.Loader}]
+[globalVar= LIT:loader8={$plugin.pagepreloader.view.Loader}]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/loader8.txt">
 [global]
 
-[globalVar= LIT:load9={$plugin.pagepreloader.view.Loader}]
+[globalVar= LIT:loader9={$plugin.pagepreloader.view.Loader}]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/loader9.txt">
 [global]
 
-[globalVar= LIT:revolution={$plugin.pagepreloader.view.Loader}]
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/revolution.txt">
+[globalVar= LIT:loader10={$plugin.pagepreloader.view.Loader}]
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/loader10.txt">
 [global]
  
