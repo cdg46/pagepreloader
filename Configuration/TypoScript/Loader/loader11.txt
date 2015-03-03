@@ -1,0 +1,67 @@
+page.cssInline {
+    20 = TEXT
+    20.value(
+/* -------------- Loader11 -------------- */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+}
+  .loader .dot {
+  position: absolute;
+  border-radius: 50%;
+  left: 1px;
+  top: 1px;
+  width: 18px;
+  height: 18px;
+  background: {$plugin.pagepreloader.view.Color};
+  animation: spin 2.5s 0s infinite both;
+}
+.loader .dot2 {
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: {$plugin.pagepreloader.view.Color};
+  animation: spin2 2.5s 0s infinite both;
+}
+
+@keyframes spin {
+  0%, 100% {
+    box-shadow: 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color};
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  25%, 75% {
+    box-shadow: 28px 0 0 {$plugin.pagepreloader.view.Color}, -28px 0 0 {$plugin.pagepreloader.view.Color}, 0 28px 0 {$plugin.pagepreloader.view.Color}, 0 -28px 0 {$plugin.pagepreloader.view.Color}, 20px -20px 0 {$plugin.pagepreloader.view.Color}, 20px 20px 0 {$plugin.pagepreloader.view.Color}, -20px -20px 0 {$plugin.pagepreloader.view.Color}, -20px 20px 0 {$plugin.pagepreloader.view.Color};
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color};
+  }
+}
+@keyframes spin2 {
+  0%, 100% {
+    box-shadow: 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color};
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  25%, 75% {
+    box-shadow: 52px 0 0 {$plugin.pagepreloader.view.Color}, -52px 0 0 {$plugin.pagepreloader.view.Color}, 0 52px 0 {$plugin.pagepreloader.view.Color}, 0 -52px 0 {$plugin.pagepreloader.view.Color}, 38px -38px 0 {$plugin.pagepreloader.view.Color}, 38px 38px 0 {$plugin.pagepreloader.view.Color}, -38px -38px 0 {$plugin.pagepreloader.view.Color}, -38px 38px 0 {$plugin.pagepreloader.view.Color};
+    background: transparent;
+  }
+  100% {
+    transform: rotate(-360deg);
+    box-shadow: 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color}, 0 0 0 {$plugin.pagepreloader.view.Color};
+  }
+}
+
+)
+}
+
+page.bodyTag = <body> <div id="preloader"><div class="loader"><div class="dot"></div><div class="dot2"></div></div></div>
