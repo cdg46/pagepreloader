@@ -7,8 +7,6 @@ page.cssInline {
   height: 35px;
   overflow: hidden;
   position: absolute;
-  top: calc(50% - 17px);
-  left: calc(50% - 35px);
 }
 .loader {
   width: 70px;
@@ -36,4 +34,4 @@ page.cssInline {
 )
 }
 
-page.bodyTag = <body> <div id="preloader"><div id="loader-container"> <div id="loader"></div> </div></div>
+page.bodyTag = <body> <div id="preloader"><div class="loader-container"> <div class="loader"></div> </div></div>
