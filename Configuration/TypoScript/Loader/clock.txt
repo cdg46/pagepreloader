@@ -3,7 +3,7 @@ page.cssInline {
     20.value(
 /* -------------- Clock -------------- */
 
-.clock{
+.loader{
 	border-radius: 60px;
 	border: 3px solid {$plugin.pagepreloader.view.Color};
 	height: 80px;
@@ -18,7 +18,7 @@ page.cssInline {
 	left: calc(50% - 43px);
 	box-sizing: content-box;
 }
-.clock:after{
+.loader:after{
 	content: "";
 	position: absolute;
 	background-color: {$plugin.pagepreloader.view.Color};
@@ -43,7 +43,7 @@ page.cssInline {
     100%{transform:rotate(360deg);}
 }
 
-.clock:before{
+.loader:before{
 	content: "";
 	position: absolute;
 	background-color: {$plugin.pagepreloader.view.Color};
@@ -70,4 +70,4 @@ page.cssInline {
 )
 }
 
-page.bodyTag = <body> <div id="preloader"><div class="clock"></div></div>
+page.bodyTag = <body> <div id="preloader"><div class="loader"></div></div>

@@ -3,9 +3,9 @@ page.cssInline {
     20 = TEXT
     20.value(
 
-/* -------------- loader4 -------------- */
+/* -------------- loader -------------- */
 
-.loader4{
+.loader{
 	position: relative;
 	width: 150px;
 	height: 20px;
@@ -20,7 +20,7 @@ page.cssInline {
 	background-color: rgba(255,255,255,0.2);
 }
 
-.loader4:before{
+.loader:before{
 	content: "";
 	position: absolute;
 	background-color: {$plugin.pagepreloader.view.Color};
@@ -32,11 +32,11 @@ page.cssInline {
 	opacity: 1;
 	-webkit-transform-origin:  100% 0%;
 			transform-origin:  100% 0% ;
-	-webkit-animation: loader4 10s ease-in-out infinite;
-			animation: loader4 10s ease-in-out infinite;
+	-webkit-animation: loader 10s ease-in-out infinite;
+			animation: loader 10s ease-in-out infinite;
 }
 
-.loader4:after{
+.loader:after{
 	content: "CHARGEMENT ...";
 	color: {$plugin.pagepreloader.view.Color};
 	font-family:  Lato,"Helvetica Neue" ;
@@ -50,14 +50,14 @@ page.cssInline {
 	top: 0;
 }
 
-@-webkit-keyframes loader4{
+@-webkit-keyframes loader{
     0%{width: 0px;}
     70%{width: 100%; opacity: 1;}
     90%{opacity: 0; width: 100%;}
     100%{opacity: 0;width: 0px;}
 }
 
-@keyframes loader4{
+@keyframes loader{
     0%{width: 0px;}
     70%{width: 100%; opacity: 1;}
     90%{opacity: 0; width: 100%;}
@@ -67,5 +67,5 @@ page.cssInline {
 )
 }
 
-page.bodyTag = <body> <div id="preloader"><div class="loader4"></div></div>
+page.bodyTag = <body> <div id="preloader"><div class="loader"></div></div>
  

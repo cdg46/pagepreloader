@@ -2,9 +2,9 @@ page.cssInline {
     20 = TEXT
     20.value(
 
-/* -------------- loader8 -------------- */
+/* -------------- loader -------------- */
 
-.loader8{
+.loader{
 	box-sizing: border-box ! important;
 	position: relative;
 	width: 80px;
@@ -29,17 +29,17 @@ page.cssInline {
 
 	-webkit-transform-origin:  50% 50%;
 		transform-origin:  50% 50% ;
-	-webkit-animation: loader8 2s linear infinite;
-		animation: loader8 2s linear infinite;
+	-webkit-animation: loader 2s linear infinite;
+		animation: loader 2s linear infinite;
 	
 }
 
-@-webkit-keyframes loader8{
+@-webkit-keyframes loader{
     0%{-webkit-transform:rotate(0deg);}
     100%{-webkit-transform:rotate(360deg);}
 }
 
-@keyframes loader8{
+@keyframes loader{
     0%{transform:rotate(0deg);}
     100%{transform:rotate(360deg);}
 }
@@ -47,5 +47,5 @@ page.cssInline {
 )
 }
 
-page.bodyTag = <body> <div id="preloader"><div class="loader8"></div></div>
+page.bodyTag = <body> <div id="preloader"><div class="loader"></div></div>
  

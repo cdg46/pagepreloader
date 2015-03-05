@@ -3,9 +3,9 @@ page.cssInline {
     20 = TEXT
     20.value(
 
-/* -------------- loader6 -------------- */
+/* -------------- loader -------------- */
 
-.loader6{
+.loader{
 	position: relative;
 	width: 12px;
 	height: 12px;
@@ -21,11 +21,11 @@ page.cssInline {
 	background-color: {$plugin.pagepreloader.view.Color};
 	-webkit-transform-origin:  50% 50%;
 			transform-origin:  50% 50% ;
-	-webkit-animation: loader6 1s ease-in-out infinite;
-			animation: loader6 1s ease-in-out infinite;
+	-webkit-animation: loader 1s ease-in-out infinite;
+			animation: loader 1s ease-in-out infinite;
 }
 
-.loader6:before{
+.loader:before{
 	content: "";
 	position: absolute;
 	background-color: {$plugin.pagepreloader.view.Color};
@@ -37,7 +37,7 @@ page.cssInline {
 	border-radius: 12px;
 }
 
-.loader6:after{
+.loader:after{
 	content: "";
 	position: absolute;
 	background-color: {$plugin.pagepreloader.view.Color};
@@ -50,13 +50,13 @@ page.cssInline {
 }
 
 
-@-webkit-keyframes loader6{
+@-webkit-keyframes loader{
     0%{-webkit-transform:rotate(0deg);}
     50%{-webkit-transform:rotate(180deg);}
     100%{-webkit-transform:rotate(180deg);}
 }
 
-@keyframes loader6{
+@keyframes loader{
     0%{transform:rotate(0deg);}
     50%{transform:rotate(180deg);}
     100%{transform:rotate(180deg);}
@@ -65,5 +65,5 @@ page.cssInline {
 )
 }
 
-page.bodyTag = <body> <div id="preloader"><div class="loader6"></div></div>
+page.bodyTag = <body> <div id="preloader"><div class="loader"></div></div>
  

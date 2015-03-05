@@ -3,7 +3,7 @@ page.cssInline {
     20.value(
 /* -------------- Sablier -------------- */
 
-.hourglass{
+.loader{
 	position: relative;
 	height: 80px;
 	width: 80px;
@@ -22,7 +22,7 @@ page.cssInline {
 	box-sizing: content-box;
 }
 
-.hourglass:before{
+.loader:before{
 	content: "";
 	position: absolute;
 	top:8px;
@@ -33,7 +33,7 @@ page.cssInline {
 	border-width: 37px 22px 0 22px;
 	border-color: {$plugin.pagepreloader.view.Color} transparent transparent transparent;
 }
-.hourglass:after{
+.loader:after{
 	content: "";
 	position: absolute;
 	top: 35px;
@@ -57,4 +57,4 @@ page.cssInline {
 )
 }
 
-page.bodyTag = <body> <div id="preloader"><div class="hourglass"></div></div>
+page.bodyTag = <body> <div id="preloader"><div class="loader"></div></div>

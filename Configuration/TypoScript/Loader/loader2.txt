@@ -1,9 +1,9 @@
 page.cssInline {
     20 = TEXT
     20.value(
-/* -------------- loader2 -------------- */
+/* -------------- loader -------------- */
 
-.loader2{
+.loader{
 	position: relative;
 	width: 5px;
 	height: 5px;
@@ -19,7 +19,7 @@ page.cssInline {
 	border-radius: 50px;
 }
 
-.loader2:before{
+.loader:before{
 	content: "";
 	position: absolute;
 	top: -38px;
@@ -30,11 +30,11 @@ page.cssInline {
 	height: 40px;
 	-webkit-transform-origin:  0% 100%;
 			transform-origin:  0% 100% ;
-	-webkit-animation: loader2 1.5s linear infinite;
-			animation: loader2 1.5s linear infinite;
+	-webkit-animation: loader 1.5s linear infinite;
+			animation: loader 1.5s linear infinite;
 }
 
-.loader2:after{
+.loader:after{
 	content: "";
 	position: absolute;
 	top: 2px;
@@ -46,16 +46,16 @@ page.cssInline {
 	height: 40px;
 	-webkit-transform-origin:  100% 0%;
 			transform-origin:  100% 0% ;
-	-webkit-animation: loader2 1.5s linear infinite;
-			animation: loader2 1.5s linear infinite;
+	-webkit-animation: loader 1.5s linear infinite;
+			animation: loader 1.5s linear infinite;
 }
 
-@-webkit-keyframes loader2{
+@-webkit-keyframes loader{
     0%{-webkit-transform:rotate(0deg);}
     100%{-webkit-transform:rotate(360deg);}
 }
 
-@keyframes loader2{
+@keyframes loader{
     0%{transform:rotate(0deg);}
     100%{transform:rotate(360deg);}
 }
@@ -63,4 +63,4 @@ page.cssInline {
 )
 }
 
-page.bodyTag = <body> <div id="preloader"><div class="loader2"></div></div>
+page.bodyTag = <body> <div id="preloader"><div class="loader"></div></div>
