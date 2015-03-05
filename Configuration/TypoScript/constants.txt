@@ -1,4 +1,4 @@
-# cat=plugin.pagepreloader; type=options [None=none,Horloge=clock,Sablier=hourglass,Loader 1=loader1, Loader 2=loader2, Loader 3=loader3, Loader 4=loader4,Loader 5=loader5,Loader 6=loader6,Loader 7=loader7,Loader 8=loader8,Loader 9=loader9,Loader 10=loader10,Loader 11=loader11, Loader 12=loader12, Loader 13=loader13, Loader 14=loader14]; label=Loader ;
+# cat=plugin.pagepreloader; type=options [None=none,Horloge=clock,Sablier=hourglass,Loader 1=loader1, Loader 2=loader2, Loader 3=loader3, Loader 4=loader4,Loader 5=loader5,Loader 6=loader6,Loader 7=loader7,Loader 8=loader8,Loader 9=loader9,Loader 10=loader10,Loader 11=loader11, Loader 12=loader12, Loader 13=loader13, Loader 14=loader14, Loader 15=loader15, Loader 16=loader16]; label=Loader ;
 plugin.pagepreloader.view.Loader = Loader 1
 # cat=plugin.pagepreloader; type=string; Label=Couleur du loader
 plugin.pagepreloader.view.Color = salmon

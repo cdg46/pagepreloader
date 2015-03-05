@@ -101,3 +101,11 @@ page.cssInline {
 [globalVar= LIT:loader14={$plugin.pagepreloader.view.Loader}]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/loader14.txt">
 [global]
+ 
+[globalVar= LIT:loader15={$plugin.pagepreloader.view.Loader}]
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/loader15.txt">
+[global]
+ 
+[globalVar= LIT:loader16={$plugin.pagepreloader.view.Loader}]
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pagepreloader/Configuration/TypoScript/Loader/loader16.txt">
+[global]

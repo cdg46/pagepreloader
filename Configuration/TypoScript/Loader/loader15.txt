@@ -1,0 +1,151 @@
+page.cssInline {
+    20 = TEXT
+    20.value(
+/* -------------- loader -------------- */
+.loader {
+  margin: 60px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  height: 100px;
+  width: 100px;
+  margin: 30px 20px;
+  position: relative;
+  text-align: center;
+}
+.load-center {
+  position: absolute;
+  background: {$plugin.pagepreloader.view.Color};
+  transform: rotate(45deg);
+  height: 30px;
+  width: 30px;
+  left: 36px;
+  top: 37px;
+  border-radius: 3px;
+  animation: pulse 1s ease infinite;
+}
+
+.load {
+  display: inline-block;
+  position: relative;
+  width: 75px;
+  height: 75px;
+  margin-top: 3px;
+  transform: rotate(45deg);
+}
+.load:after, .load:before {
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 10px;
+  display: block;
+  top: 0;
+  border-radius: 3px;
+  background: {$plugin.pagepreloader.view.Color};
+  animation-delay: -.5s;
+}
+.load:after {
+  right: 0;
+  animation: square-tr 2s ease infinite;
+  animation-delay: .125s;
+}
+.load:before {
+  animation: square-tl 2s ease infinite;
+  animation-delay: .125s;
+}
+
+.load.two {
+  position: relative;
+  top: -80px;
+}
+.load.two:after, .load.two:before {
+  bottom: 0;
+  top: initial;
+}
+.load.two:after {
+  animation: square-br 2s ease infinite;
+  animation-direction: reverse;
+}
+.load.two:before {
+  animation: square-bl 2s ease infinite;
+  animation-direction: reverse;
+}
+
+@keyframes square-tl {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, 62.5px);
+  }
+  50% {
+    transform: translate(62.5px, 62.5px);
+  }
+  75% {
+    transform: translate(62.5px, 0);
+  }
+}
+@keyframes square-bl {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -62.5px);
+  }
+  50% {
+    transform: translate(62.5px, -62.5px);
+  }
+  75% {
+    transform: translate(62.5px, 0);
+  }
+}
+@keyframes square-tr {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-62.5px, 0);
+  }
+  50% {
+    transform: translate(-62.5px, 62.5px);
+  }
+  75% {
+    transform: translate(0, 62.5px);
+  }
+}
+@keyframes square-br {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-62.5px, 0);
+  }
+  50% {
+    transform: translate(-62.5px, -62.5px);
+  }
+  75% {
+    transform: translate(0, -62.5px);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(inherit) rotate(45deg);
+  }
+  75% {
+    transform: scale(0.25) rotate(45deg);
+  }
+}
+)
+}
+
+page.bodyTag = <body> <div id="preloader"><div class="loader"> <span class="load one"></span> <span class="load two"></span> <span class="load-center"></span></div></div>
